@@ -8,7 +8,7 @@ Template Name: Custom Homepage Template
 
 
 	<div class="home-page">
-
+		<p>Test</p>
 
     </div>
 
