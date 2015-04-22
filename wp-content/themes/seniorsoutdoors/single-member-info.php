@@ -7,8 +7,8 @@
 
  
     	<div class="member-info">
-    		<h2 class="member-name"><?php the_field('first_name'); ?> <?php the_field('last_name'); ?></h2>
-    		<p><?php the_field('summary_description'); ?></p>
+            <img src="images/<?php the_field('first-name'); ?><?php the_field('last-name'); ?>.jpg" alt="temp alt">
+    		<h2 class="member-name"><?php the_field('first_name'); ?> X. <?php the_field('last_name'); ?></h2>
 
     		<div class="art-features">
     			<h3>Art making features:</h3>
