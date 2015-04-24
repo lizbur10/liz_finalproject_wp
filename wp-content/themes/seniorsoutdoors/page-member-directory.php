@@ -25,15 +25,18 @@ Template Name: Member Directory Template
                             $email = get_field('email');
                             $phone = get_field('phone');
                             $street_address = get_field('street_address');
+                            $city = get_field('city');
+                            $state = get_field('state');
+                            $zip_code = get_field('zip_code');
                             $spouse_first_name = get_field('spouse_first_name');
                             $spouse_last_name = get_field('spouse_last_name');
                 ?>
                 
                 <tr>
-                    <td><?php echo $first_name ?> <?php echo $last_name ?></td>
+                    <td><a href="http://localhost:8888/liz_finalproject_wp/member_info/<?php echo $first_name ?>-<?php echo $last_name ?>"><?php echo $first_name ?> <?php echo $last_name ?></a></td>
                     <td><?php echo $email ?></td>
                     <td><?php echo $phone ?></td>
-                    <td><?php echo $street_address ?></td>
+                    <td><?php echo $street_address ?>, <?php echo $city ?>, <?php echo $state ?> <?php echo $zip_code ?></td>
                     <td><?php echo $spouse_first_name ?> <?php echo $spouse_last_name ?></td>
                 </tr>
 

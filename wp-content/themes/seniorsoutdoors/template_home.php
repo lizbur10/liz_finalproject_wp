@@ -4,6 +4,8 @@ Template Name: Custom Homepage Template
 */
 
 	get_header();
+
+	get_month();
 ?>
 
 
