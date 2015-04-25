@@ -5,12 +5,11 @@ Template Name: Custom Homepage Template
 
 	get_header();
 
-	get_month();
 ?>
 
 
 	<div class="home-page">
-		<p>Test</p>
+		<h1 class="page-title">Welcome to Seniors Outdoors!</h1>
 
     </div>
 

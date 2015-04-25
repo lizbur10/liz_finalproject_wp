@@ -6,29 +6,14 @@
 
 
  
-    	<div class="member-info">
-    		<h2 class="member-name"><?php the_field('first_name'); ?>  <?php the_field('last_name'); ?></h2>
-            <img src="<?php the_field('image'); ?>" alt="<?php the_field('first_name'); ?> <?php the_field('last_name'); ?>";
+    <h1 class="page-title">Member Information</h1>
+    <img class="member-pic" src="<?php the_field('image'); ?>" alt="<?php the_field('first_name'); ?> <?php the_field('last_name'); ?>">
 
-    		<div class="member-email">
-    			<h3>Email:</h3>
-    			<div><?php the_field('email'); ?></div>
-    		</div>
-
-    		<div class="member-phone">
-    			<h3>Phone:</h3>
-    			<div><?php the_field('phone'); ?></div>
-    		</div>
-
-    		<div class="member-address">
-                <h3>Address:</h3>
-                <div><?php the_field('street_address'); ?>, <?php the_field('city'); ?>, <?php the_field('state'); ?> <?php the_field('zip_code'); ?></div>
-     		</div>
-
-            <div class="spouse">
-                <h3>Spouse/partner:</h3>
-                <div><?php the_field('spouse_first_name'); ?> <?php the_field('spouse_last_name'); ?></div>
-            </div>
-    		
-    	</div>
+    <div class="member-info">
+        <h2 class="member-name"><?php the_field('first_name'); ?>  <?php the_field('last_name'); ?></h2>
+        <p><span class="contact-field-label">Email:  </span><?php the_field('email'); ?></p>
+        <p><span class="contact-field-label">Phone:  </span><?php the_field('phone'); ?></p>
+        <p><span class="contact-field-label">Address:  </span><?php the_field('street_address'); ?>, <?php the_field('city'); ?>, <?php the_field('state'); ?> <?php the_field('zip_code'); ?></p>
+        <p><span class="contact-field-label">Spouse/partner:  </span><?php the_field('spouse_first_name'); ?> <?php the_field('spouse_last_name'); ?></dd>
+    </div>
 

@@ -23,7 +23,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<img class="logo" src="http://localhost:8888/liz_finalproject_wp/wp-content/themes/seniorsoutdoors/images/so_logo_small.png" alt="Seniors Outdoors logo">
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">

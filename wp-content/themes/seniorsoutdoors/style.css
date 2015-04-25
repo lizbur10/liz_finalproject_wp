@@ -41,19 +41,21 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 12.0 Media
 	12.1 Captions
 	12.2 Galleries
+13.0 SeniorsOutdoors
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
 
 body {
-	margin: 0;
+	width: 95%;
+	margin: 2rem auto;
 }
 
 article,
@@ -270,6 +272,7 @@ button,
 input,
 select,
 textarea {
+	font-family: 'Open Sans', sans-serif;
 	color: #404040;
 	font-size: 16px;
 	font-size: 1rem;
@@ -524,6 +527,11 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
+	position: absolute;
+	top: 0; 
+	left: 0;
+	height: 2rem;
+	background-color: #775077;
 }
 
 .main-navigation ul {
@@ -533,13 +541,20 @@ a:active {
 }
 
 .main-navigation li {
+	padding: .2rem 2rem;
 	float: left;
 	position: relative;
+	font-weight: bold;
 }
 
 .main-navigation a {
+	color: white;
 	display: block;
 	text-decoration: none;
+}
+
+.main-navigation a:visited {
+	color: white;
 }
 
 .main-navigation ul ul {
@@ -881,4 +896,66 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+13.0 Seniors Outdoors
+--------------------------------------------------------------*/
+
+header {
+	padding-bottom: 2rem;
+}
+
+.logo {
+	margin-top: 2rem;
+}
+
+.page-title {
+	position: absolute;
+	top: 1.5rem;
+	left: 11rem;
+	font-size: 4rem;
+
+}
+/* Styling of Member Information page */
+
+.member-pic {
+	float:left;
+	padding-right: 2rem;
+	padding-top: 3rem;
+}
+
+.member-name {
+	padding-bottom: .9rem;
+	color: #775077;
+}
+
+.member-info {
+	float:left;
+	line-height: .9;
+}
+
+.contact-field-label {
+	font-weight: bold;
+}
+
+/* Styling of Member Directory table */
+
+.member-directory, th, td {
+	border: 1px solid lightgray;
+}
+
+.member-directory tr.even td {
+    color: #000000;
+    background-color: hsl(300, 20%, 90%);
+}
+
+th, td {
+	text-align: left;
+	padding: .5rem;
+}
+
+th {
+	background-color: #775077;
+	color: white;
 }
