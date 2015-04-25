@@ -51,11 +51,12 @@ $dogs = get_field('dogs');
 //Limit
 $limit = get_field('limit');
 
+//RSVP
+$rsvp = get_field('rsvp');
 
 //Other info
 $other_info = get_field('other_info');
 
-$category = get_field('category');
 
 ?>
 
@@ -88,10 +89,14 @@ $category = get_field('category');
 			<img src="<?php the_field('featured_image') ?>" > 
 		</div>
 
-	<?php if (!has_term('so-meeting','tribe_events_cat')): ?>
+	<?php if (! ($rsvp == 'No')): ?>
 
 		<section id="register">
-			<h2>Register:</h2>
+			<?php if ($rsvp == 'Non-members only'): ?>
+				<h2>Register (non-members only):</h2>
+			<?php else: ?>
+				<h2>Register:</h2>
+			<?php endif; ?>
 			<form name="outing_registration" action="#" method="post">
 				<p><label for="name">Name</label>: <input id="name" type="text" name="name" size="30" required></p>
 				<p><label for="email">Email</label>: <input id="email" type="email" name="email" size="30" required></p>
@@ -119,32 +124,54 @@ $category = get_field('category');
 <!-- Event Meta -->
 <div>
 	<?php if (has_term('so-meeting','tribe_events_cat')): ?>
-	<dl>
-		<dt>Meet at: </dt><dd><?php echo $venue_name ?></dd>
-	</dl> 
-	<?php else: ?>
-	<dl>
-		<dt>Meet at: </dt><dd><?php echo $venue_name ?></dd>
-		<?php if($difficulty): ?>
-			<dt>Difficulty: </dt><dd><?php echo $difficulty ?></p>
-		<?php endif; ?>
-		<dt>Total distance: </dt><dd><?php echo $total_distance ?> miles</dd>
-		<dt>Elevation gain: </dt><dd><?php echo $elevation_gain ?> feet</dd>
-		<dt>Organizer: </dt><dd><?php echo $organizer ?></dd>
-		<?php if($carpool): ?>
-			<dt>Carpool: </dt><dd><?php echo $carpool ?></dd>
-		<?php endif; ?>
-		<?php if($dogs): ?>
-			<dt>Dogs: </dt>
-				<dd><?php foreach($dogs as $dog) {
-					echo $dog ; }
-			endif; ?></dd>
-		<?php if($limit): ?>
-			<dt>Limit: </dt><dd><?php echo $limit ?> people</dd>
-		<?php endif; ?>
+		<p>Meet at: <?php echo $venue_name ?></p>
+
 		<?php if($other_info): ?>
 			<dt>Other info: </dt><dd><?php echo $other_info ?></dd>
 		<?php endif; ?>
+
+	<?php else: ?>
+		<p>Meet at: <?php echo $venue_name ?></p>
+		<?php  
+			while(have_rows('alternate_meeting_places')): the_row(); ?>
+
+				<p><?php the_sub_field('meeting_place'); ?> <?php the_sub_field('time'); ?></p>
+
+
+			<?php endwhile; ?>
+	<dl>	
+		<?php if($difficulty): ?>
+			<dt>Difficulty: </dt><dd><?php echo $difficulty ?></dd>
+		<?php endif; 
+		
+		if ($total_distance): ?>
+			<dt>Total distance: </dt><dd><?php echo $total_distance ?> miles</dd>
+		<?php endif; 
+		
+		if ($elevation_gain): ?>
+			<dt>Elevation gain: </dt><dd><?php echo $elevation_gain ?> feet</dd>
+		<?php endif; 
+
+		if ($organizer): ?>
+			<dt>Organizer: </dt><dd><?php echo $organizer ?></dd>
+		<?php endif; 
+
+		 if($carpool): ?>
+			<dt>Carpool: </dt><dd>$<?php echo $carpool ?></dd>
+		<?php endif; 
+
+		if($dogs): ?>
+			<dt>Dogs: </dt><dd><?php echo $dogs ?></dd>
+		<?php endif; 
+
+		if($limit): ?>
+			<dt>Limit: </dt><dd><?php echo $limit ?></dd>
+		<?php endif; 
+
+		if($other_info): ?>
+			<dt>Other info: </dt><dd><?php echo $other_info ?></dd>
+		<?php endif; ?>
+
 	</dl> 
 <?php endif; ?>
 
