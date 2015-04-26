@@ -64,3 +64,21 @@ h2.entry-title a:visited {
 .end-time {
 	display: none;
 }
+
+.events-list #tribe-events-footer, .single-tribe_events #tribe-events-footer, .tribe-events-day #tribe-events-footer, .tribe-events-map #tribe-events-footer, .tribe-events-photo #tribe-events-footer {
+    border-top: 1px solid #E5E5E5;
+    padding-top: 2em;
+}
+
+#tribe-events-footer, #tribe-events-header {
+    margin-bottom: 0.5em;
+    clear: both;
+}
+
+.tribe-events-nav-previous {
+	text-align: left;
+}
+
+.tribe-events-nav-next {
+	text-align: right;
+}
