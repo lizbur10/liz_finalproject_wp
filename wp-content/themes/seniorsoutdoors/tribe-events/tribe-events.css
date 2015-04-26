@@ -1,0 +1,66 @@
+/* Styling of Events pages - overrides default Events style */
+
+.entry-title {
+	font-size: 2.5rem;
+}
+
+h2.entry-title a:visited {
+	color: #775077;
+}
+
+.url {
+	text-decoration: none;
+	color: #404040;
+}
+
+.single-tribe_events a:visited {
+	color: #404040;
+} 
+
+#register h2 {
+	color: #775077;
+}
+
+.time-details {
+	clear: both;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #775077;
+	padding-top: 1rem;
+}
+
+.single-tribe_events .tribe-events-single-event-description {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.event-image {
+	float: left;
+	padding-right: 2rem;
+}
+
+#register {
+	float: left;
+}
+
+.event-details dt {
+	clear: left;
+	float: left;
+}
+
+.event-details dd {
+	clear: right;
+	padding-left: 3rem;
+}
+
+.alternate-meeting-places {
+	padding-left: 2rem;
+}
+
+.other-info {
+	margin-bottom: 0;
+}
+
+.end-time {
+	display: none;
+}

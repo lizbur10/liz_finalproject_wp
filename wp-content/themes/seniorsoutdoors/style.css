@@ -506,9 +506,7 @@ a:visited {
 
 a:hover,
 a:focus,
-a:active {
-	color: midnightblue;
-}
+a:active 
 
 a:focus {
 	outline: thin dotted;
@@ -935,7 +933,7 @@ header {
 	line-height: .9;
 }
 
-.contact-field-label {
+.field-label {
 	font-weight: bold;
 }
 
@@ -956,6 +954,6 @@ th, td {
 }
 
 th {
-	background-color: #775077;
+	background-color: #986798;
 	color: white;
 }

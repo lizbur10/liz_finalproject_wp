@@ -64,9 +64,11 @@ $other_info = get_field('other_info');
 <!-- Event Cost -->
 <?php if ( tribe_get_cost() ) : ?>
 	<div class="tribe-events-event-cost">
-		<span><?php echo tribe_get_cost( null, true ); ?></span>
+		<p><span><?php echo tribe_get_cost( null, true ); ?></span>
 	</div>
 <?php endif; ?>
+
+<h1 class="page-title">Upcoming Events</h1>
 
 <!-- Event Title -->
 <?php do_action( 'tribe_events_before_the_event_title' ) ?>
@@ -86,7 +88,7 @@ $other_info = get_field('other_info');
 		<!-- Event featured image, but exclude link -->
 
 		<div>
-			<img src="<?php the_field('featured_image') ?>" > 
+			<img class="event-image" src="<?php the_field('featured_image') ?>" > 
 		</div>
 
 	<?php if (! ($rsvp == 'No')): ?>
@@ -122,64 +124,67 @@ $other_info = get_field('other_info');
 
 
 <!-- Event Meta -->
-<div>
+<div class="event-details">
 	<?php if (has_term('so-meeting','tribe_events_cat')): ?>
-		<p>Meet at: <?php echo $venue_name ?></p>
+		<dt class="field-label">Meet at: </dt><?php echo $venue_name ?>
 
 		<?php if($other_info): ?>
-			<dt>Other info: </dt><dd><?php echo $other_info ?></dd>
+			<p class="other-info"><span class="field-label">Other info: </span></p>
+				<p><?php echo $other_info ?></p>
 		<?php endif; ?>
 
 	<?php else: ?>
-		<p>Meet at: <?php echo $venue_name ?></p>
-		<?php  
-			while(have_rows('alternate_meeting_places')): the_row(); ?>
+		<dt class="field-label">Meet at: <?php echo $venue_name ?></dt>
+		<?php  if(have_rows('alternate_meeting_places')): ?>
+			<p class="field-label">Alternate Meeting Places:</p>
 
-				<p><?php the_sub_field('meeting_place'); ?> <?php the_sub_field('time'); ?></p>
+			<?php while(have_rows('alternate_meeting_places')): the_row(); ?>
+
+				<p class="alternate-meeting-places"><?php the_sub_field('meeting_place'); ?> @ <?php the_sub_field('time'); ?></p>
 
 
-			<?php endwhile; ?>
-	<dl>	
+			<?php endwhile; 
+		endif; ?>
+
+	<div>	
 		<?php if($difficulty): ?>
-			<dt>Difficulty: </dt><dd><?php echo $difficulty ?></dd>
+			<p><span class="field-label">Difficulty:  </span><?php echo $difficulty ?></p>
 		<?php endif; 
 		
 		if ($total_distance): ?>
-			<dt>Total distance: </dt><dd><?php echo $total_distance ?> miles</dd>
+			<p><span class="field-label">Total distance:  </span><?php echo $total_distance ?> miles</p>
 		<?php endif; 
 		
 		if ($elevation_gain): ?>
-			<dt>Elevation gain: </dt><dd><?php echo $elevation_gain ?> feet</dd>
+			<p><span class="field-label">Elevation gain:  </span><?php echo $elevation_gain ?> feet</p>
 		<?php endif; 
 
 		if ($organizer): ?>
-			<dt>Organizer: </dt><dd><?php echo $organizer ?></dd>
+			<p><span class="field-label">Organizer:  </span><?php echo $organizer ?></p>
 		<?php endif; 
 
 		 if($carpool): ?>
-			<dt>Carpool: </dt><dd>$<?php echo $carpool ?></dd>
+			<p><span class="field-label">Carpool:  </span>$<?php echo $carpool ?></p>
 		<?php endif; 
 
 		if($dogs): ?>
-			<dt>Dogs: </dt><dd><?php echo $dogs ?></dd>
+			<p><span class="field-label">Dogs:  </span><?php echo $dogs ?></p>
 		<?php endif; 
 
 		if($limit): ?>
-			<dt>Limit: </dt><dd><?php echo $limit ?></dd>
+			<p><span class="field-label">Limit:  </span><?php echo $limit ?></p>
 		<?php endif; 
 
 		if($other_info): ?>
-			<dt>Other info: </dt><dd><?php echo $other_info ?></dd>
+			<p class="other-info"><span class="field-label">Other info:  </span></p>
+			<p><?php echo $other_info ?></p>
 		<?php endif; ?>
 
-	</dl> 
+	</div> 
 <?php endif; ?>
 
 </div><!-- .tribe-events-event-meta -->
 <?php do_action( 'tribe_events_after_the_meta' ) ?>
-
-<!-- Event Image -->
-<?php echo tribe_event_featured_image( null, 'medium' ) ?>
 
 	<!-- Event footer -->
 	<div id="tribe-events-footer">
@@ -187,8 +192,8 @@ $other_info = get_field('other_info');
 		<!-- Navigation -->
 		<h3 class="tribe-events-visuallyhidden"><?php _e( 'Event Navigation', 'tribe-events-calendar' ) ?></h3>
 		<ul class="tribe-events-sub-nav">
-			<li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link( '<span>&laquo;</span> %title%' ) ?></li>
-			<li class="tribe-events-nav-next"><?php tribe_the_next_event_link( '%title% <span>&raquo;</span>' ) ?></li>
+			<li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link( '<p><span>&laquo;</span> %title%' ) ?></li>
+			<li class="tribe-events-nav-next"><?php tribe_the_next_event_link( '%title% <p><span>&raquo;</span>' ) ?></li>
 		</ul>
 		<!-- .tribe-events-sub-nav -->
 	</div>
