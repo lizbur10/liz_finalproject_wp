@@ -900,8 +900,12 @@ object {
 13.0 Seniors Outdoors
 --------------------------------------------------------------*/
 
+body {
+	background-position: 5px 5px;
+}
+
 header {
-	padding-bottom: 2rem;
+	height: 8rem;
 }
 
 .logo {
