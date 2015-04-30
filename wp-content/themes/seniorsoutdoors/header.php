@@ -30,9 +30,8 @@ $(window).load(function() {
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<img class="logo" src="http://localhost:8888/liz_finalproject_wp/wp-content/themes/seniorsoutdoors/images/so_logo_small.png" alt="Seniors Outdoors logo">
-<!--			<img class="logo" src="http://burtonux.com/liz_finalproject_wp/wp-content/themes/seniorsoutdoors/images/so_logo_small.png" alt="Seniors Outdoors logo">
--->		</div><!-- .site-branding -->
+			<img id="logo" src="<?php  echo get_stylesheet_directory_uri().'/images/so_logo_small.png' ; ?>" alt="<?php bloginfo( 'name' );?> ">
+		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Primary Menu', 'seniorsoutdoors' ); ?></button>

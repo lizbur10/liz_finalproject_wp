@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Month View Content Template
  * The content template for the month view of events. This template is also used for

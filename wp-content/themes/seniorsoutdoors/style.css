@@ -905,10 +905,10 @@ body {
 }
 
 header {
-	height: 8rem;
+	height: 10rem;
 }
 
-.logo {
+#logo {
 	margin-top: 2rem;
 }
 

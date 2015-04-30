@@ -37,7 +37,7 @@ Template Name: Member Directory Template
             <?php else: ?>
                 <tr class="odd">
             <?php endif; ?>
-                <td><a href="http://localhost:8888/liz_finalproject_wp/member_info/<?php echo $first_name ?>-<?php echo $last_name ?>"><?php echo $first_name ?> <?php echo $last_name ?></a></td>
+                <td><a href="../member_info/<?php echo $first_name ?>-<?php echo $last_name ?>"><?php echo $first_name ?> <?php echo $last_name ?></a></td>
                 <td><?php echo $email ?></td>
                 <td><?php echo $phone ?></td>
                 <td><?php echo $street_address ?>, <?php echo $city ?>, <?php echo $state ?> <?php echo $zip_code ?></td>
