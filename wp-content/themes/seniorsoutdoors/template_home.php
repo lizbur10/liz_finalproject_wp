@@ -56,7 +56,6 @@ Template Name: Custom Homepage Template
     endif; ?>
 </section>
 
-<p>My name is Pam</p>
 
 
 <?php
