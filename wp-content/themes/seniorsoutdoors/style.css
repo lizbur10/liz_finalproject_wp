@@ -920,6 +920,11 @@ header {
 
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 
 /* Color definitions */
@@ -943,30 +948,40 @@ header {
 
 /* Home Page - Gallery */
 
+.image-section {
+	width: 440px;
+	position: absolute;
+	top: 620px;
+	left: 800px;
+}
+
+h2.gallery-title {
+	text-align: center;
+}
 
 .slides {
 	float: left;
-	margin: 0.5em 3.9% 0 0;
+	width: 440px;
+/*	margin: 0.25em 0 0 -1.2em; */
 }
 
-.slides ul {
+ul.slides {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .slides img {
-	max-width: 600px;
-	max-height: 450px;
+	display: block;
+	max-width: 400px;
+	max-height: 400px;
+	margin: 0 auto;
 }
 
 /*** Adding navigation icons in the flexslider gallery ***/
 /* Code obtained from: http://astronautweb.co/snippet/font-awesome/ */
 
-.image-section {
-    position: relative;
-}
  
-/*replace the content value with the
-corresponding value from the list below*/
  
 
 .flex-direction-nav .flex-nav-prev .flex-prev:before, .flex-next:before {
@@ -977,10 +992,9 @@ corresponding value from the list below*/
 /*--adjust as necessary--*/
     color: #000;
     font-size: 2rem;
-    padding-right: 0.5em;
     position: absolute;
-    top: 200px;
-    left: 0;
+    top: 220px;
+ 	left: 0;
     display: block;
     z-index: 2;
 }
@@ -991,7 +1005,11 @@ corresponding value from the list below*/
 
 .flex-direction-nav .flex-nav-next .flex-next:before {
     content: "\f138";
-    left: 650px;
+    left: 410px;
+}
+
+.flex-active-slide {
+	margin: 0;
 }
 
 /*** End navigation icon section ***/
@@ -1050,17 +1068,19 @@ ul.flex-direction-nav  {
 
 .tribe-events-sub-nav {
 	list-style: none;
+	padding: 0;
 	
 }
 
 .tribe-events-sub-nav a {
 	text-decoration: none;
+	color: #996699;
 }
 
 .tribe-events-nav-previous {
 	text-align: left;
 	margin-bottom: -1.5rem;
-	margin-left: -5.5rem;
+	margin-left: -2.5rem;
 }
 
 .tribe-events-nav-next {
@@ -1101,7 +1121,7 @@ ul.flex-direction-nav  {
 
 
 .tribe-events-calendar td div[id*="tribe-events-daynum-"] {
-	padding: 6px 9px;
+	padding: 6px 6px;
 	line-height: 1.2;
 }
 .tribe-events-calendar td a {font-size: 91.7%;}
@@ -1142,6 +1162,11 @@ ul.flex-direction-nav  {
 
 /* Styling of Member Directory table */
 
+.member-directory th {
+	background-color: #996699;
+	color: white;
+}
+
 .member-directory th, td {
 	border: 1px solid lightgray;
 	text-align: left;
@@ -1157,6 +1182,11 @@ ul.flex-direction-nav  {
 	font-size: 1rem;
 }
 
+/* Footer */
+.copyright {
+	margin-top: 2rem;
+	font-size: .8rem;
+}
 
 /* Global stuff */
 

@@ -12,7 +12,8 @@ Template Name: Custom Homepage Template
 
 <div class="page-content">
 
-    <section class="image-section">
+    <section class="image-section clearfix">
+        <h2 class="gallery-title">Name of Recent Outing</h2>
     	<?php $images = get_field('image_gallery'); ?>
 
     <?php
