@@ -1093,7 +1093,7 @@
     animationLoop: true,            //Boolean: Should the animation loop? If false, directionNav will received "disable" classes at either end
     smoothHeight: false,            //{NEW} Boolean: Allow height of the slider to animate smoothly in horizontal mode
     startAt: 0,                     //Integer: The slide that the slider should start on. Array notation (0 = first slide)
-    slideshow: true,                //Boolean: Animate slider automatically
+    slideshow: false,                //Boolean: Animate slider automatically
     slideshowSpeed: 7000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
     animationSpeed: 600,            //Integer: Set the speed of animations, in milliseconds
     initDelay: 0,                   //{NEW} Integer: Set an initialization delay, in milliseconds
@@ -1112,8 +1112,8 @@
     // Primary Controls
     controlNav: true,               //Boolean: Create navigation for paging control of each slide? Note: Leave true for manualControls usage
     directionNav: true,             //Boolean: Create navigation for previous/next navigation? (true/false)
-    prevText: "Previous",           //String: Set the text for the "previous" directionNav item
-    nextText: "Next",               //String: Set the text for the "next" directionNav item
+    prevText: "",           //String: Set the text for the "previous" directionNav item
+    nextText: "",               //String: Set the text for the "next" directionNav item
 
     // Secondary Navigation
     keyboard: true,                 //Boolean: Allow slider navigating via keyboard left/right keys

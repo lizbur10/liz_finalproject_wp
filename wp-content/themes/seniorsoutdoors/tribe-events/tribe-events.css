@@ -1,14 +1,14 @@
-/* Styling of Events pages - overrides default Events style */
+/* Styling of Individual Events pages - overrides default Events style */
 
-.entry-title {
+.single-tribe_events .entry-title {
 	font-size: 2.5rem;
 }
 
-h2.entry-title a:visited {
+.single-tribe_events h2.entry-title a:visited {
 	color: #775077;
 }
 
-.url {
+.single-tribe_events .url {
 	text-decoration: none;
 	color: #404040;
 }
@@ -17,11 +17,11 @@ h2.entry-title a:visited {
 	color: #404040;
 } 
 
-#register h2 {
+.single-tribe_events #register h2 {
 	color: #775077;
 }
 
-.time-details {
+.single-tribe_events .time-details {
 	clear: both;
 	font-size: 1.5rem;
 	font-weight: bold;
@@ -34,40 +34,40 @@ h2.entry-title a:visited {
 	margin-bottom: 0;
 }
 
-.event-image {
+.single-tribe_events .event-image {
 	float: left;
 	padding-right: 2rem;
 }
 
-#register {
+.single-tribe_events #register {
 	float: left;
 }
 
-.event-details dt {
+.single-tribe_events .event-details dt {
 	clear: left;
 	float: left;
 }
 
-.event-details dd {
+.single-tribe_events .event-details dd {
 	clear: right;
 	padding-left: 3rem;
 }
 
-.alternate-meeting-places {
+.single-tribe_events .alternate-meeting-places {
 	padding-left: 2rem;
 }
 
-.other-info {
+.single-tribe_events .other-info {
 	margin-bottom: 0;
 }
 
-.end-time {
+.single-tribe_events .end-time {
 	display: none;
 }
 
 .events-list #tribe-events-footer, .single-tribe_events #tribe-events-footer, .tribe-events-day #tribe-events-footer, .tribe-events-map #tribe-events-footer, .tribe-events-photo #tribe-events-footer {
-    border-top: 1px solid #E5E5E5;
-    padding-top: 2em;
+    	border-top: 1px solid #E5E5E5;
+    	padding-top: 2em;
 }
 
 #tribe-events-footer, #tribe-events-header {
@@ -82,3 +82,4 @@ h2.entry-title a:visited {
 .tribe-events-nav-next {
 	text-align: right;
 }
+
