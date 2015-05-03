@@ -10,7 +10,7 @@ Template Name: Custom Homepage Template
 
 <h1 class="page-title">Welcome to Seniors Outdoors!</h1>
 
-<div class="home-page">
+<div class="page-content">
 
     <section class="image-section">
     	<?php $images = get_field('image_gallery'); ?>

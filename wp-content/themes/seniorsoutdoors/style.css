@@ -920,6 +920,8 @@ header {
 
 }
 
+
+
 /* Color definitions */
 
 .purple-dark {
@@ -936,6 +938,7 @@ header {
 
 
 /*** Styling of home page ***/
+
 
 
 /* Home Page - Gallery */
@@ -1009,16 +1012,12 @@ ul.flex-direction-nav  {
 
 /* Home Page - Featured Section */
 
-
-.end-time {
-	display: none;
-}
-
 .featured {
 	width: 30rem;
 	text-align: center;
-	float: left;
+	float: right;
 	padding-left: 2rem;
+	margin-top: 2rem;
 }
 
 .featured h3 {
@@ -1027,6 +1026,10 @@ ul.flex-direction-nav  {
 
 .featured p {
 	margin-top: 0;
+}
+
+.end-time {
+	display: none;
 }
 
 .single-space {
@@ -1040,18 +1043,30 @@ ul.flex-direction-nav  {
 
 /* Home Page - Calendar view */
 
+.calendar-month-view {
+	float: left;
+	width: 60%;
+}
+
 .tribe-events-sub-nav {
 	list-style: none;
+	
 }
 
 .tribe-events-sub-nav a {
 	text-decoration: none;
 }
 
-.tribe-events-calendar {
-	width: 60%;
-	float: left;
+.tribe-events-nav-previous {
+	text-align: left;
+	margin-bottom: -1.5rem;
+	margin-left: -5.5rem;
 }
+
+.tribe-events-nav-next {
+	text-align: right;
+}
+
 
 .tribe-events-calendar th {
 	background-color: #F7E0AA;
@@ -1062,6 +1077,11 @@ ul.flex-direction-nav  {
 .tribe-events-calendar td a {
 	color: #996699;
 	font-size: .6rem;
+}
+
+.tribe-events-page-title {
+	text-align: center;
+	margin-bottom: -1rem;
 }
 
 #tribe-events-content .tribe-events-calendar td {
@@ -1092,6 +1112,7 @@ ul.flex-direction-nav  {
 }
 
 .tribe-events-calendar div[id*="tribe-events-daynum-"] {
+	font-size: 1rem;
 	font-weight: bold;
 	color: #404040;
 }
@@ -1133,7 +1154,7 @@ ul.flex-direction-nav  {
 }
 
 .member-directory td {
-	font-size: .8rem;
+	font-size: 1rem;
 }
 
 
