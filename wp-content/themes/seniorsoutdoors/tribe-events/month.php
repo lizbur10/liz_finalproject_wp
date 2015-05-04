@@ -11,14 +11,31 @@
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
-} ?>
+} 
+
+?>
+
+
+<?php get_header(); ?>
+
+	<h1 class="page-title">Upcoming Outings</h1>
+
 
 <?php do_action( 'tribe_events_before_template' ) ?>
 
-<!-- Tribe Bar -->
-<?php tribe_get_template_part( 'modules/bar' ); ?>
 
 <!-- Main Events Content -->
-<?php tribe_get_template_part( 'month/content' ); ?>
+<?php tribe_show_month(); ?>
+
+
+<!-- Upcoming Meeting -->
 
 <?php do_action( 'tribe_events_after_template' ) ?>
+
+
+
+
+
+
+
+<?php get_footer(); ?>

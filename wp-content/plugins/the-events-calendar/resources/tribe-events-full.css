@@ -889,7 +889,7 @@ select.tribe-events-dropdown {
 .tribe-events-calendar div[id*="tribe-events-daynum-"] a {
 	background-color: #f5f5f5;
 	color: #333;
-	font-size: 11px;
+	font-size: 20px;
 	font-weight: bold;
 }
 .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"],

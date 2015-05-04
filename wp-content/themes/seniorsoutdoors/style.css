@@ -900,11 +900,15 @@ object {
 13.0 Seniors Outdoors
 --------------------------------------------------------------*/
 
-header {
-	padding-bottom: 2rem;
+body {
+	background-position: 5px 5px;
 }
 
-.logo {
+header {
+	height: 10rem;
+}
+
+#logo {
 	margin-top: 2rem;
 }
 
@@ -915,6 +919,225 @@ header {
 	font-size: 4rem;
 
 }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Color definitions */
+
+.purple-dark {
+	color: #775077;
+}
+
+.purple-medium {
+	color: #996699;
+}
+
+.yellow-tan {
+	color: #F7E0AA;
+}
+
+
+/*** Styling of home page ***/
+
+
+
+/* Home Page - Gallery */
+
+.image-section {
+	width: 440px;
+/*	position: absolute;
+	top: 620px;
+	left: 800px;*/
+}
+
+h2.gallery-title {
+	text-align: center;
+}
+
+.slides {
+	float: left;
+	width: 440px;
+/*	margin: 0.25em 0 0 -1.2em; */
+}
+
+ul.slides {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.slides img {
+	display: block;
+	max-width: 400px;
+	max-height: 400px;
+	margin: 0 auto;
+}
+
+/*** Adding navigation icons in the flexslider gallery ***/
+/* Code obtained from: http://astronautweb.co/snippet/font-awesome/ */
+
+ 
+ 
+
+.flex-direction-nav .flex-nav-prev .flex-prev:before, .flex-next:before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+/*--adjust as necessary--*/
+    color: #000;
+    font-size: 2rem;
+    position: absolute;
+    top: 420px;
+ 	left: 31px;
+    display: block;
+    z-index: 2;
+}
+
+.flex-direction-nav .flex-nav-prev .flex-prev:before {
+    content: "\f137";
+}
+
+.flex-direction-nav .flex-nav-next .flex-next:before {
+    content: "\f138";
+    left: 445px; 
+}
+
+.flex-active-slide {
+	margin: 0;
+}
+
+/*** End navigation icon section ***/
+
+
+.flex-control-nav {
+	display: none;
+}
+
+ul.flex-direction-nav  {
+	list-style: none;
+}
+
+/* End Gallery Section */
+
+
+
+
+/* Home Page - Featured Section */
+
+.featured {
+	width: 30rem;
+	text-align: center;
+	float: right;
+	padding-left: 2rem;
+	margin-top: 2rem;
+}
+
+.featured h3 {
+	margin-bottom: 0;
+}
+
+.featured p {
+	margin-top: 0;
+}
+
+.end-time {
+	display: none;
+}
+
+.single-space {
+	margin-bottom: 0;
+}
+
+/* End Featured Section */
+
+
+
+
+/* Home Page - Calendar view */
+
+.calendar-month-view {
+	float: left;
+	width: 60%;
+}
+
+.tribe-events-sub-nav {
+	list-style: none;
+	padding: 0;
+	
+}
+
+.tribe-events-sub-nav a {
+	text-decoration: none;
+	color: #996699;
+}
+
+.tribe-events-nav-previous {
+	text-align: left;
+	margin-bottom: -1.5rem;
+	margin-left: -2.5rem;
+}
+
+.tribe-events-nav-next {
+	text-align: right;
+}
+
+
+.tribe-events-calendar th {
+	background-color: #F7E0AA;
+	color: black;
+	text-align: center;
+}
+
+.tribe-events-calendar td a {
+	color: #996699;
+	font-size: .6rem;
+}
+
+.tribe-events-page-title {
+	text-align: center;
+	margin-bottom: -1rem;
+}
+
+#tribe-events-content .tribe-events-calendar td {
+	border: 1px solid #F7E0AA;
+	height: 150px;
+	text-align: left;
+	padding: .5rem;
+	font-size: .8rem;
+	width: 14.28%;
+	color: #114b7d;
+	vertical-align: top;
+	font-size: 12px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+
+.tribe-events-calendar td div[id*="tribe-events-daynum-"] {
+	padding: 6px 6px;
+	line-height: 1.2;
+}
+.tribe-events-calendar td a {font-size: 91.7%;}
+.tribe-events-calendar div[id*="tribe-events-event-"],
+.tribe-events-calendar div[id*="tribe-events-daynum-"] {
+	position: relative;
+	margin: 0;
+}
+
+.tribe-events-calendar div[id*="tribe-events-daynum-"] {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #404040;
+}
+
+
 /* Styling of Member Information page */
 
 .member-pic {
@@ -939,8 +1162,15 @@ header {
 
 /* Styling of Member Directory table */
 
-.member-directory, th, td {
+.member-directory th {
+	background-color: #996699;
+	color: white;
+}
+
+.member-directory th, td {
 	border: 1px solid lightgray;
+	text-align: left;
+	padding-left: .5rem;
 }
 
 .member-directory tr.even td {
@@ -948,12 +1178,27 @@ header {
     background-color: hsl(300, 20%, 90%);
 }
 
-th, td {
-	text-align: left;
-	padding: .5rem;
+.member-directory td {
+	font-size: 1rem;
 }
 
-th {
-	background-color: #986798;
-	color: white;
+/* Footer */
+.copyright {
+	margin-top: 2rem;
+	font-size: .8rem;
 }
+
+/* Global stuff */
+
+.tribe-events-visuallyhidden, .tribe-events-ical {
+	border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* 

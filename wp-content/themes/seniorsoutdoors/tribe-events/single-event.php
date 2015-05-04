@@ -198,4 +198,4 @@ $other_info = get_field('other_info');
 		<!-- .tribe-events-sub-nav -->
 	</div>
 	<!-- #tribe-events-footer -->
-
+<?php get_footer(); ?>
