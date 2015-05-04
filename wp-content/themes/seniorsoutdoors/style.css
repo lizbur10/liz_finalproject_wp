@@ -950,9 +950,9 @@ header {
 
 .image-section {
 	width: 440px;
-	position: absolute;
+/*	position: absolute;
 	top: 620px;
-	left: 800px;
+	left: 800px;*/
 }
 
 h2.gallery-title {
@@ -993,8 +993,8 @@ ul.slides {
     color: #000;
     font-size: 2rem;
     position: absolute;
-    top: 220px;
- 	left: 0;
+    top: 420px;
+ 	left: 31px;
     display: block;
     z-index: 2;
 }
@@ -1005,7 +1005,7 @@ ul.slides {
 
 .flex-direction-nav .flex-nav-next .flex-next:before {
     content: "\f138";
-    left: 410px;
+    left: 445px; 
 }
 
 .flex-active-slide {
