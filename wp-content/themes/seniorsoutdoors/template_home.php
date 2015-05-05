@@ -12,33 +12,13 @@ Template Name: Custom Homepage Template
 
 <div class="page-content">
 
-    <section class="image-section clearfix">
-        <h2 class="gallery-title">Name of Recent Outing</h2>
-    	<?php $images = get_field('image_gallery'); ?>
-
-    <?php
-        if( $images ): ?>
-            <div id="slider" class="flexslider">
-                <ul class="slides">
-                    <?php foreach( $images as $image ): ?>
-                        <li>
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                            <p><?php echo $image['caption']; ?></p>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
-        <?php endif; ?>
-    </section>
-
-
     <section class="calendar-month-view">
         <?php tribe_show_month(); ?>
     </section>
 
 
     <section class="featured">
-    	<?php $found = false;
+        <?php $found = false;
 
         $wp_query = new WP_Query('post_type=tribe_events'); 
         
@@ -65,6 +45,27 @@ Template Name: Custom Homepage Template
             endwhile;
         endif; ?>
     </section>
+
+    <?php wp_reset_query(); ?>
+
+    <section class="image-section">
+        <h2 class="gallery-title">Name of Recent Outing</h2>
+        <?php $images = get_field('image_gallery'); 
+        if( $images ): ?>
+            <div id="slider" class="flexslider">
+                <ul class="slides">
+                    <?php foreach( $images as $image ): ?>
+                        <li>
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                            <p><?php echo $image['caption']; ?></p>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        <?php endif; ?>
+    </section>
+
+
 
 </div>
 
