@@ -951,6 +951,11 @@ header {
 .image-section {
 	width: 440px;
 	float: right;
+	margin-top: 3em;
+}
+
+.image-section h2 {
+	font-size: 1.2em;
 }
 
 .flexslider {
@@ -961,10 +966,9 @@ h2.gallery-title {
 	text-align: center;
 }
 
-.slides {
-	float: left;
+.slides li {
 	width: 440px;
-/*	margin: 0.25em 0 0 -1.2em; */
+	height: 400px;
 }
 
 ul.slides {
@@ -974,10 +978,16 @@ ul.slides {
 }
 
 .slides img {
+	position: absolute;
 	display: block;
 	max-width: 400px;
 	max-height: 400px;
-	margin: 0 auto;
+	margin: 0;
+	left: 50%;
+	top: 50%;
+	margin-bottom: -50%;
+	transform: translate(-50%, -50%);
+
 }
 
 /*** Adding navigation icons in the flexslider gallery ***/
@@ -995,7 +1005,7 @@ ul.slides {
     color: #000;
     font-size: 2rem;
     position: absolute;
-    top: 140px;
+    top: 178px;
  	left: 0px;
     display: block;
     z-index: 2;
@@ -1048,7 +1058,7 @@ ul.flex-direction-nav  {
 	margin-top: 0;
 }
 
-.end-time {
+.start-time, .end-time {
 	display: none;
 }
 
@@ -1070,8 +1080,7 @@ ul.flex-direction-nav  {
 
 .tribe-events-sub-nav {
 	list-style: none;
-	padding: 0;
-	
+	padding: 0;	
 }
 
 .tribe-events-sub-nav a {
@@ -1085,7 +1094,7 @@ ul.flex-direction-nav  {
 	margin-left: -2.5rem;
 }
 
-.tribe-events-nav-next {
+li.tribe-events-nav-next {
 	text-align: right;
 }
 

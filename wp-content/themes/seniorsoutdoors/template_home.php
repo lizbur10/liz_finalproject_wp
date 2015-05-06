@@ -31,7 +31,9 @@ Template Name: Custom Homepage Template
     				$found = true; ?>
 
     			    <h2 class="event-title purple-dark"><?php the_title() ?></h2>
-    			    <p><?php echo $venue; ?></p>
+    			    <p class="single-space"><?php echo $venue; ?></p>
+                    <p><?php echo tribe_events_event_schedule_details() ?></p>
+
                     <?php 
                     if ($other_info) : ?>
                         <p><?php echo $other_info; ?></p>
@@ -46,10 +48,11 @@ Template Name: Custom Homepage Template
         endif; ?>
     </section>
 
-    <?php wp_reset_query(); ?>
+    <?php wp_reset_query();          /*       https://digwp.com/2011/09/3-ways-to-reset-the-wordpress-loop/     */
+    ?>
 
     <section class="image-section">
-        <h2 class="gallery-title">Name of Recent Outing</h2>
+        <h2 class="gallery-title"><?php the_field('outing_name') ?>:</h2>
         <?php $images = get_field('image_gallery'); 
         if( $images ): ?>
             <div id="slider" class="flexslider">
