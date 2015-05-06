@@ -46,6 +46,7 @@ Template Name: Custom Homepage Template
             	endif;
             endwhile;
         endif; ?>
+        <hr>
     </section>
 
     <?php wp_reset_query();          /*       https://digwp.com/2011/09/3-ways-to-reset-the-wordpress-loop/     */

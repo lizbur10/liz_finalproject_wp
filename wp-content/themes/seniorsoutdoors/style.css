@@ -951,7 +951,7 @@ header {
 .image-section {
 	width: 440px;
 	float: right;
-	margin-top: 3em;
+	margin-top: 2em;
 }
 
 .image-section h2 {
@@ -964,6 +964,7 @@ header {
 
 h2.gallery-title {
 	text-align: center;
+	color: #775077;
 }
 
 .slides li {
@@ -1064,6 +1065,14 @@ ul.flex-direction-nav  {
 
 .single-space {
 	margin-bottom: 0;
+}
+
+hr {
+    height: 1px;
+    width: 200px;
+	margin-top: 4em;
+	border-color: #996699;
+	background-color: #996699;
 }
 
 /* End Featured Section */
