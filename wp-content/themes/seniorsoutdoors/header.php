@@ -31,6 +31,7 @@ $(window).load(function() {
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<img id="logo" src="<?php  echo get_stylesheet_directory_uri().'/images/SO_logo_small_cleaned.png' ; ?>" alt="<?php bloginfo( 'name' );?> ">
+			<p class="site-name"><span class="big">S</span>eniors <span class="big">O</span>utdoors!</p>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">

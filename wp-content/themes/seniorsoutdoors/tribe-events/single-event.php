@@ -68,7 +68,7 @@ $other_info = get_field('other_info');
 	</div>
 <?php endif; ?>
 
-<h1 class="page-title">Upcoming Events</h1>
+<h1 class="page-title visually-hidden">Upcoming Events</h1>
 
 <!-- Event Title -->
 <?php do_action( 'tribe_events_before_the_event_title' ) ?>

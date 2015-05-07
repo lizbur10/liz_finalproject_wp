@@ -8,7 +8,7 @@ Template Name: Custom Homepage Template
 ?>
 
 
-<h1 class="page-title">Welcome to Seniors Outdoors!</h1>
+<h1 class="page-title visually-hidden">Welcome to Seniors Outdoors!</h1>
 
 <div class="page-content">
 

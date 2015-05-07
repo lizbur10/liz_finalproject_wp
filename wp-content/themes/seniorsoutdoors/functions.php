@@ -104,7 +104,7 @@ function seniorsoutdoors_scripts() {
 
 	wp_enqueue_style( 'seniorsoutdoors-font-awesome', 'http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' );
 
-	wp_enqueue_style( 'seniorsoutdoors-google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700' );
+	wp_enqueue_style( 'seniorsoutdoors-google-fonts', 'http://fonts.googleapis.com/css?family=Oswald|Open+Sans:400,600,700' );
 
 	wp_enqueue_script( 'seniorsoutdoors-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

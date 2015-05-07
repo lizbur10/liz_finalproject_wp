@@ -6,7 +6,7 @@
 
 
  
-    <h1 class="page-title">Member Information</h1>
+    <h1 class="page-title visually-hidden">Member Information</h1>
     <img class="member-pic" src="<?php the_field('image'); ?>" alt="<?php the_field('first_name'); ?> <?php the_field('last_name'); ?>">
 
     <div class="member-info">
