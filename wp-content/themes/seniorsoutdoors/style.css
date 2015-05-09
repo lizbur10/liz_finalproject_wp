@@ -1062,10 +1062,6 @@ ul.flex-direction-nav  {
 	margin-top: 0;
 }
 
-.start-time, .end-time {
-	display: none;
-}
-
 .single-space {
 	margin-bottom: 0;
 }
@@ -1090,10 +1086,6 @@ hr {
 	width: 60%;
 }
 
-.tribe-events-othermonth div[id*="tribe-events-daynum-"] {
-	color: lightgray;
-}
-
 .tribe-events-sub-nav {
 	list-style: none;
 	padding: 0;	
@@ -1102,6 +1094,7 @@ hr {
 .tribe-events-sub-nav a {
 	text-decoration: none;
 	color: #996699;
+	font-size: 1.2rem;
 }
 
 .tribe-events-nav-previous {
@@ -1126,10 +1119,19 @@ li.tribe-events-nav-next {
 	font-size: .6rem;
 }
 
-.tribe-events-page-title {
+.calendar-month-view .tribe-events-page-title {
+	display: none;
+}
+
+.tribe-events-page-title, .calendar-month-title {
 	text-align: center;
-	margin-bottom: -1rem;
 	color: #555;
+}
+
+.month-year {
+	text-align: center;
+	color: #775077;
+	margin-bottom: -1rem;
 }
 
 #tribe-events-content .tribe-events-calendar td {
@@ -1164,6 +1166,11 @@ li.tribe-events-nav-next {
 	font-weight: bold;
 	color: #404040;
 }
+
+.tribe-events-othermonth div[id*="tribe-events-daynum-"] {
+	color: lightgray;
+}
+
 
 
 /* Styling of Member Information page */

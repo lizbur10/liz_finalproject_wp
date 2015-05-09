@@ -5,6 +5,8 @@ Template Name: Custom Homepage Template
 
 	get_header();
 
+
+    $date = tribe_get_month_view_date();
 ?>
 
 
@@ -13,6 +15,8 @@ Template Name: Custom Homepage Template
 <div class="page-content">
 
     <section class="calendar-month-view">
+        <h2 class="calendar-month-title">Outing Schedule</h2> 
+        <h3 class="month-year"><?php echo tribe_event_format_date( $date, $displayTime = false, $dateFormat = 'F Y' ); ?></h3>
         <?php tribe_show_month(); ?>
     </section>
 
@@ -22,17 +26,17 @@ Template Name: Custom Homepage Template
 
         $wp_query = new WP_Query('post_type=tribe_events'); 
         
-        if ( $wp_query->have_posts() AND !$found ): 
+        if ( $wp_query->have_posts() ): 
             while ( $wp_query->have_posts() ) : $wp_query->the_post();
 
-    	    	if (has_term('featured-event','tribe_events_cat') ) : 
+    	    	if (has_term('featured-event','tribe_events_cat') AND !$found ) : 
                     $other_info = get_field('other_info');
                     $venue = tribe_get_venue();
-    				$found = true; ?>
+    				$found = true;  ?>
 
     			    <h2 class="event-title purple-dark"><?php the_title() ?></h2>
     			    <p class="single-space"><?php echo $venue; ?></p>
-                    <p><?php echo tribe_events_event_schedule_details() ?></p>
+                    <p><?php echo the_event_start_date(null,FALSE,'l, F j'); ?></p>
 
                     <?php 
                     if ($other_info) : ?>
@@ -42,11 +46,11 @@ Template Name: Custom Homepage Template
                         <p class="single-space">Social: 6:30 pm</p>
                         <p class="single-space">Meeting: 7:00 pm</p>
                     <?php endif;
-    		        $content = the_content(); 
-            	endif;
+    		        $content = the_content(); ?>
+                    <hr>
+                <?php endif; 
             endwhile;
         endif; ?>
-        <hr>
     </section>
 
     <?php wp_reset_query();          /*       https://digwp.com/2011/09/3-ways-to-reset-the-wordpress-loop/     */
@@ -68,7 +72,6 @@ Template Name: Custom Homepage Template
             </div>
         <?php endif; ?>
     </section>
-
 
 
 </div>

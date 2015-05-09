@@ -10,11 +10,11 @@
 
 .single-tribe_events .url {
 	text-decoration: none;
-	color: #404040;
+	color: #775077;
 }
 
 .single-tribe_events a:visited {
-	color: #404040;
+	color: #775077;
 } 
 
 .single-tribe_events #register h2 {
@@ -41,6 +41,7 @@
 
 .single-tribe_events #register {
 	float: left;
+	margin-bottom: 2rem;
 }
 
 .single-tribe_events .event-details dt {
@@ -59,10 +60,6 @@
 
 .single-tribe_events .other-info {
 	margin-bottom: 0;
-}
-
-.single-tribe_events .end-time {
-	display: none;
 }
 
 

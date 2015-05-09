@@ -17,6 +17,8 @@ $event_id = get_the_ID();
 
 ?>
 
+<div id="tribe-events-content" class="tribe-events-single vevent hentry">
+
 <?php
 
 // Setup an array of venue details for use later in the template
@@ -29,6 +31,8 @@ if ( $venue_name = tribe_get_meta( 'tribe_event_venue_name' ) ) {
 if ( $venue_address = tribe_get_meta( 'tribe_event_venue_address' ) ) {
 	$venue_details[] = $venue_address;
 }
+
+$featured_image = get_field('featured_image');
 
 // Organizer
 $organizer = tribe_get_organizer();
@@ -88,7 +92,9 @@ $other_info = get_field('other_info');
 		<!-- Event featured image, but exclude link -->
 
 		<div>
-			<img class="event-image" src="<?php the_field('featured_image') ?>" > 
+			<?php if ($featured_image) : ?>
+				<img class="event-image" src="<?php the_field('featured_image') ?>" > 
+			<?php endif; ?>
 		</div>
 
 	<?php if (! ($rsvp == 'No')): ?>
@@ -110,8 +116,14 @@ $other_info = get_field('other_info');
 
 		<!-- Schedule & Recurrence Details -->
 		<div class="updated published time-details">
-			<?php echo tribe_events_event_schedule_details() ?>
-		</div>
+			<?php if ( !tribe_event_is_all_day( $event ) ):
+				echo tribe_get_start_date(null,TRUE,'l, F j, g:i a');  
+			else :
+				echo tribe_get_start_date(null,FALSE,'F j'); ?> - <?php
+				echo tribe_get_end_date(null,FALSE,'F j'); 
+			endif; ?>
+<!--			<?php echo tribe_events_event_schedule_details() ?>
+-->		</div>
 
 		<!-- Event content -->
 		<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
@@ -192,10 +204,12 @@ $other_info = get_field('other_info');
 		<!-- Navigation -->
 		<h3 class="tribe-events-visuallyhidden"><?php _e( 'Event Navigation', 'tribe-events-calendar' ) ?></h3>
 		<ul class="tribe-events-sub-nav">
-			<li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link( '<p><span>&laquo;</span> %title%' ) ?></li>
-			<li class="tribe-events-nav-next"><?php tribe_the_next_event_link( '%title% <p><span>&raquo;</span>' ) ?></li>
+			<li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link( '<span>&laquo;</span> %title%' ) ?></li>
+			<li class="tribe-events-nav-next"><?php tribe_the_next_event_link( '%title% <span>&raquo;</span>' ) ?></li>
 		</ul>
 		<!-- .tribe-events-sub-nav -->
 	</div>
 	<!-- #tribe-events-footer -->
+
+</div>
 <?php get_footer(); ?>
