@@ -928,7 +928,7 @@ header {
 	transition: color 5s ease-out;
 }
 
-.site-branding p:hover {
+.site-branding:hover p {
 	color: #B26C6F;
 }
 
