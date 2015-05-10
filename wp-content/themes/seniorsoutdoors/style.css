@@ -947,6 +947,9 @@ header {
 
 /*** Styling of home page ***/
 
+.site-branding a, .site-branding a:visited {
+	text-decoration: none;
+}
 
 
 /* Home Page - Gallery */
@@ -1086,25 +1089,31 @@ hr {
 	width: 60%;
 }
 
+table.tribe-events-calendar {
+	margin: .5rem 0;
+}
+
 .tribe-events-sub-nav {
 	list-style: none;
 	padding: 0;	
+	padding-bottom: .5rem;
 }
 
 .tribe-events-sub-nav a {
 	text-decoration: none;
 	color: #996699;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 }
 
-.tribe-events-nav-previous {
-	text-align: left;
-	margin-bottom: -1.5rem;
-	margin-left: -2.5rem;
+li.tribe-events-nav-previous {
+	display: block;
+	float: left;
+	margin-left: -3rem;
 }
 
 li.tribe-events-nav-next {
-	text-align: right;
+	display: block;
+	float: right;
 }
 
 
@@ -1131,7 +1140,7 @@ li.tribe-events-nav-next {
 .month-year {
 	text-align: center;
 	color: #775077;
-	margin-bottom: -1rem;
+	margin-bottom: 0;
 }
 
 #tribe-events-content .tribe-events-calendar td {

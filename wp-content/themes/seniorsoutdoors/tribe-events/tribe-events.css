@@ -65,32 +65,31 @@
 
 /*  Events page - Calendar View */
 
+.tribe-filter-live h1 {
+	display: none;
+}
 
 #tribe-events-content table.tribe-events-calendar {
 	border: 1px solid #F7E0AA;
-	font-size: 1rem;
 }
 
 .tribe-events-calendar div[id*=tribe-events-event-] h3.entry-title a {
-  font-size: .8rem;
+  font-size: .9rem;
+  font-weight: bold;
 }
-
 
 .events-list #tribe-events-footer, .single-tribe_events #tribe-events-footer, .tribe-events-day #tribe-events-footer, .tribe-events-map #tribe-events-footer, .tribe-events-photo #tribe-events-footer {
     padding-top: 2em;
 }
 
-#tribe-events-footer, #tribe-events-header {
-    margin-bottom: 0.5em;
+
+#tribe-events-footer .tribe-events-sub-nav li.tribe-events-nav-previous, #tribe-events-header .tribe-events-sub-nav li.tribe-events-nav-previous {
+	display: block;
+	float: left;
 }
 
-.tribe-events-nav-previous {
-	text-align: left;
-	margin-bottom: -1.5rem;
-	margin-left: -5.5rem;
-}
-
-.tribe-events-nav-next {
-	text-align: right;
+#tribe-events-footer .tribe-events-sub-nav li.tribe-events-nav-next, #tribe-events-header .tribe-events-sub-nav li.tribe-events-nav-next {
+	display: block;
+	float: right;
 }
 
