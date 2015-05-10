@@ -921,6 +921,15 @@ header {
 	font-weight: 400;
 	margin-top: 2rem;
 	line-height: 1.1;
+	-webkit-transition: color 5s ease-out;
+	-moz-transition: color 5s ease-out;
+	-o-transition: color 5s ease-out;
+	-ms-transition: color 5s ease-out;
+	transition: color 5s ease-out;
+}
+
+.site-branding p:hover {
+	color: #B26C6F;
 }
 
 .clearfix:after {
