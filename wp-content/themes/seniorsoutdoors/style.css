@@ -1230,6 +1230,34 @@ li.tribe-events-nav-next {
 	font-size: 1rem;
 }
 
+/* Single Events Page Styling */
+
+.main-content {
+	padding-bottom: .5rem;
+	border-bottom: 1px solid lightgray;
+}
+
+
+#tribe-events-footer {
+	padding: 0;
+}
+
+#tribe-events-footer .tribe-events-sub-nav li {
+	display: block;
+	width: inherit;
+}
+
+#tribe-events-footer .tribe-events-sub-nav li.tribe-events-nav-previous, #tribe-events-header .tribe-events-sub-nav li.tribe-events-nav-previous {
+	float: left;
+}
+
+#tribe-events-footer .tribe-events-sub-nav li.tribe-events-nav-next, #tribe-events-header .tribe-events-sub-nav li.tribe-events-nav-next {
+	float: right;
+}
+
+
+
+
 /* Footer */
 .copyright {
 	margin-top: 2rem;
