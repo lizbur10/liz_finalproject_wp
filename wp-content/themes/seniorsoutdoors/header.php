@@ -12,7 +12,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script type="text/javascript" src="/liz_finalproject_wp/wp-content/themes/seniorsoutdoors/js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="/seniorsoutdoors/wp-content/themes/seniorsoutdoors/js/jquery.flexslider.js"></script>
 <script type="text/javascript" charset="utf-8">
 $(window).load(function() {
 	$('.flexslider').flexslider();
@@ -30,7 +30,7 @@ $(window).load(function() {
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<a href="http://burtonux.com/liz_finalproject_wp/">
+			<a href="http://burtonux.com/seniorsoutdoors/">
 				<img id="logo" src="<?php  echo get_stylesheet_directory_uri().'/images/SO_logo_small_cleaned.png' ; ?>" alt="<?php bloginfo( 'name' );?> ">
 				<p class="site-name">Seniors Outdoors!</p>
 			</a>
